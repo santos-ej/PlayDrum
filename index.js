@@ -46,7 +46,14 @@ function playDrum(key){
 function animateButton(key){
     var activeButton; 
     switch (key) {
-        case "w" || "a" || "s" || "d" || "j" || "k" || "l":
+        //case "w" || "a" || "s" || "d" || "j" || "k" || "l":
+        case "w":
+        case "a":
+        case "s":
+        case "d":
+        case "j":
+        case "k":
+        case "l":
                     activeButton = document.querySelector("." + key).classList.add("pressed");
                 setTimeout(() => {
                     activeButton =  document.querySelector("." + key).classList.remove("pressed");
