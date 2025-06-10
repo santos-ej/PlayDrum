@@ -52,20 +52,21 @@ function playDrum(key){
 
 function animateButton(key){
     var activeButton; 
-    switch (key) {
-        //case "w" || "a" || "s" || "d" || "j" || "k" || "l":
-        case "w":
-        case "a":
-        case "s":
-        case "d":
-        case "j":
-        case "k":
-        case "l":
+
+    switch (key) {    
+        case "w": 
+        case "a": 
+        case "s": 
+        case "d": 
+        case "j": 
+        case "k": 
+        case "l": 
                     activeButton = document.querySelector("." + key).classList.add("pressed");
-                setTimeout(() => {
+                setTimeout(() => {  
                     activeButton =  document.querySelector("." + key).classList.remove("pressed");
                 }, 100);   
         default:
+            console.log( "inside the animate button - enters default: " + key);  
             break;
     }             
 }
@@ -76,77 +77,3 @@ document.addEventListener("keydown",
         animateButton(event.key);
     }
 );
-
-
-
-/******** MY VERSION *******/
-/*
-function playDrum(key){
-
-    switch (key) {
-        case "w":
-                console.log( "inside the case: " + key);                     
-                soundCrash.play();
-                break;
-        case "a":
-                console.log( "inside the case: " + key);     
-                soundKickBass.play();                    
-                break;
-        case "s":
-                console.log( "inside the case: " + key);     
-                soundSnare.play();                     
-            break;
-        case "d":
-                console.log( "inside the case: " + key);     
-                soundTom1.play();                      
-            break;
-        case "j":
-                console.log( "inside the case: " + key);     
-                soundTom2.play();                       
-            break;
-        case "k":
-                console.log( "inside the case: " + key);     
-                soundTom3.play();                       
-            break;
-        case "l":
-                console.log( "inside the case: " + key);     
-                soundTom4.play();                       
-            break;
-
-        default:
-            break;
-    }            
-}
-*/
-
-
-/******** keydown *******/
-
-/*
-document.addEventListener("keydown", 
-    function (event){
-        console.log(event);
-        console.log(event.key);
-    }
-);*/
-
-
-/******** SOUND  *******/
-/*  const soundTom1 = new Audio('./sounds/tom-1.mp3');
-    soundTom1.play();*/
-
-/******** MY SAMPLE CLICKS  *******/
-
-/*
-function deezNuts(){
-    alert("Deez Nuts");
-}    
-
-document.querySelector(".w").addEventListener("click", deezNuts);
-document.querySelector(".a").addEventListener("click", deezNuts);
-document.querySelector(".s").addEventListener("click", deezNuts);
-document.querySelector(".d").addEventListener("click", deezNuts);
-document.querySelector(".j").addEventListener("click", deezNuts);
-document.querySelector(".k").addEventListener("click", deezNuts);
-document.querySelector(".l").addEventListener("click", deezNuts);
-*/
