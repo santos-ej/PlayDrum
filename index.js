@@ -70,16 +70,6 @@ function animateButton(key){
     }             
 }
 
-for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click",
-        function(){
-            var buttonClass  = this.innerHTML;
-            playDrum(buttonClass);
-            animateButton(buttonClass);
-        }
-    );
-}
-
 document.addEventListener("keydown", 
     function (event){
         playDrum(event.key);
