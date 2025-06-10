@@ -11,30 +11,37 @@ function playDrum(key){
     switch (key) {
         case "w":
                 console.log( "inside the case: " + key);                     
+                soundCrash.currentTime = 0;
                 soundCrash.play();
                 break;
         case "a":
-                console.log( "inside the case: " + key);     
+                console.log( "inside the case: " + key); 
+                soundKickBass.currentTime = 0;     
                 soundKickBass.play();                    
                 break;
         case "s":
-                console.log( "inside the case: " + key);     
+                console.log( "inside the case: " + key);
+                soundSnare.currentTime = 0;     
                 soundSnare.play();                     
             break;
         case "d":
                 console.log( "inside the case: " + key);     
+                soundTom1.currentTime = 0; 
                 soundTom1.play();                      
             break;
         case "j":
                 console.log( "inside the case: " + key);     
+                soundTom2.currentTime = 0; 
                 soundTom2.play();                       
             break;
         case "k":
-                console.log( "inside the case: " + key);     
+                console.log( "inside the case: " + key); 
+                soundTom3.currentTime = 0; 
                 soundTom3.play();                       
             break;
         case "l":
-                console.log( "inside the case: " + key);     
+                console.log( "inside the case: " + key);
+                soundTom4.currentTime = 0;
                 soundTom4.play();                       
             break;
 
